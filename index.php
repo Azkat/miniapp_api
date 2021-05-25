@@ -55,7 +55,7 @@ $data = array(
   );
   $data = array(
     "templateName" => "order_comp_s_o_ja",
-    "params" => "",
+    //"params" => "",
     "notificationToken" => $notificationToken,
   );
   $data = json_encode($data);
