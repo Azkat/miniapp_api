@@ -28,7 +28,7 @@ echo $access_token ;
 
 //サービス通知トークンを取得する
 $data = array(
-    "liffAccessToken" => "eyJhbGciOiJIUzI1NiJ9.UOdHAINGR72S6ay8kqpoA1gZ5EEbaBe-h7_wyCbyvVbz6crobC0nWuVkgVJMq_MSodWpbQczc51-1XpeyU8ahO29sX-_cFgN4LSfr67hS5sI527-AfM1bfPnGbEDFfwaY0V83aL5Znqx28HLSVCF9KEDhsbGwDj72yG4nagw8Go.kCn0K4g1m4lcB0f5KI_AejWUgXe0m7dYYOL3U-qw3x4",
+    "liffAccessToken" => "eyJhbGciOiJIUzI1NiJ9.VaPKYsnKmTvWMIy7gwq49t5MUCiPKVHVum6gNlZzeRd_CmB3e9PUjNCYj6ALowpyNDmQdbX8K4yLD2NsxvuyXSL6x1IkUV8RrpCXflOta4HHapEMIgP1K_Z5MFf-W_MnQL_p41J7Nl2TK4okf3Camsxqj4ZZSJVRGU38TK0v7v4.dWkyBiqRTIgVxxIz3D9oCWGTJsc439JUhuo7OZ7mhuw",
   );
   $data = json_encode($data);
   $header = array(
