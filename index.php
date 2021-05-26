@@ -1,5 +1,10 @@
 <?php
 
+//LIFFアクセストークンを取得する
+$liff_access_token = "";
+if(isset($_GET['access_token'])) { 
+    $liff_access_token = $_GET['access_token']; 
+}
 
 //チャネルアクセストークンを取得する
 $url = 'https://api.line.me/v2/oauth/accessToken';
@@ -28,7 +33,7 @@ echo $access_token ;
 
 //サービス通知トークンを取得する
 $data = array(
-    "liffAccessToken" => "eyJhbGciOiJIUzI1NiJ9.VaPKYsnKmTvWMIy7gwq49t5MUCiPKVHVum6gNlZzeRd_CmB3e9PUjNCYj6ALowpyNDmQdbX8K4yLD2NsxvuyXSL6x1IkUV8RrpCXflOta4HHapEMIgP1K_Z5MFf-W_MnQL_p41J7Nl2TK4okf3Camsxqj4ZZSJVRGU38TK0v7v4.dWkyBiqRTIgVxxIz3D9oCWGTJsc439JUhuo7OZ7mhuw",
+    "liffAccessToken" => $liff_access_token,
   );
   $data = json_encode($data);
   $header = array(
