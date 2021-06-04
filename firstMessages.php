@@ -74,4 +74,22 @@ $data = array(
   $context = stream_context_create($options);
   $json = file_get_contents("https://api.line.me/message/v3/notifier/send?target=service", false, $context);
 
+  try {
+    // MySQLへの接続
+    //$dbh = new PDO('mysql:host=db;dbname=test', 'root', 'secret');
+    $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_9699b41f8abea79', 'bdbc5765369b41', 'f99a0919');
+
+    // 接続を使用する
+    $sth = $dbh->query('SELECT * FROM heroku_9699b41f8abea79.fooo;');
+    $sth = $dbh->query('INSERT INTO heroku_9699b41f8abea79.fooo (notification_token, access_token) values ('.$notificationToken .','.$access_token.');');
+
+    // 接続を閉じる
+    $sth = null;
+    $dbh = null;
+
+} catch (PDOException $e) { // PDOExceptionをキャッチする
+    print "エラー!: " . $e->getMessage() . "<br/gt;";
+    die();
+}
+
 ?>
