@@ -16,7 +16,7 @@
   $data = json_encode($data);
   echo   $data;
   $header = array(
-    "Content-Type: application/json; charset=UTF-8",
+    "Content-Type: mediaType.toString()",
     'Authorization: Bearer '. $channel_access_token,
     );
   $options = array(
