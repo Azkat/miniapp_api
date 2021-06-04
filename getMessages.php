@@ -19,7 +19,8 @@
         'id'=>$row['id'],
         'name'=>$row['name'],
         'notification_token'=>$row['notification_token'],
-        'access_token'=>$row['access_token']
+        'access_token'=>$row['access_token'],
+        'channel_access_token'=>$row['channel_access_token']
         );
       }
       
