@@ -85,7 +85,8 @@ $data = array(
   
   try {
       // MySQLへの接続
-      $dbh = new PDO('mysql:host=db;dbname=test', $user, $pass);
+      $dbh = new PDO('mysql:host=db;dbname=test', 'root', 'secret');
+      $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=test', 'bdbc5765369b41', 'f99a0919');
   
       // 接続を使用する
       $sth = $dbh->query('SELECT * from fooo');
