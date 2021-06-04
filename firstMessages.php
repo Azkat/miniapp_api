@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
 //チャネルアクセストークンを取得する
 $url = 'https://api.line.me/v2/oauth/accessToken';
