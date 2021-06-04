@@ -85,7 +85,7 @@ $data = array(
   
   try {
       // MySQLへの接続
-      $dbh = new PDO('mysql:host=db;dbname=test', 'root', 'secret');
+      //$dbh = new PDO('mysql:host=db;dbname=test', 'root', 'secret');
       $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_9699b41f8abea79', 'bdbc5765369b41', 'f99a0919');
   
       // 接続を使用する
