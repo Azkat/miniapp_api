@@ -82,7 +82,7 @@ $data = array(
     $dbh = new PDO('mysql:host=us-cdbr-east-04.cleardb.com;dbname=heroku_9699b41f8abea79', 'bdbc5765369b41', 'f99a0919');
 
     // 接続を使用する
-    $sql = 'INSERT INTO heroku_9699b41f8abea79.fooo (notification_token, access_token) values ( '. $notificationToken .' ,'. $access_token .')';   
+    $sql = 'INSERT INTO heroku_9699b41f8abea79.fooo (notification_token, access_token) values ( "'. $notificationToken .'" ,"'. $access_token .'")';   
     $dbh->prepare($sql);
     $stmt->execute($params);
 
