@@ -1,6 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 
+$liff_access_token = $_GET['access_token']; 
+
 //チャネルアクセストークンを取得する
 $url = 'https://api.line.me/v2/oauth/accessToken';
 $data = array(
