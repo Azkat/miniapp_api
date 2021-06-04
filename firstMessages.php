@@ -84,7 +84,7 @@ $data = array(
     // 接続を使用する
     $sql = 'INSERT INTO heroku_9699b41f8abea79.fooo (notification_token, access_token) values ( "'. $notificationToken .'" ,"'. $access_token .'");';   
     $dbh->prepare($sql);
-    $stmt->execute($params);
+    $stmt->execute();
 
     // 接続を閉じる
     $sth = null;
