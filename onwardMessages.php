@@ -2,7 +2,7 @@
   header('Access-Control-Allow-Origin: *');
 
   $notification_token = $_GET['notification_token']; 
-  $channel_access_token = $_GET['channel_access_token']; 
+  $channel_access_token = $_GET['channel_access_token'];
 
   //後続メッセージを送信する
   $params = array(
@@ -16,7 +16,7 @@
   $data = json_encode($data);
   echo   $data;
   $header = array(
-    "Content-Type: mediaType.toString()",
+    "Content-Type:  application/json; charset=UTF-8",
     'Authorization: Bearer '. $channel_access_token,
     );
   $options = array(
