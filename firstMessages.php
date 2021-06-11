@@ -75,6 +75,8 @@ $data = array(
   );
   $context = stream_context_create($options);
   $json = file_get_contents("https://api.line.me/message/v3/notifier/send?target=service", false, $context);
+  $arr = json_decode($json, true);
+  $notificationToken = $arr['notificationToken'];
 
   try {
     // MySQLへの接続
