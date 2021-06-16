@@ -4,6 +4,29 @@
   $notification_token = $_GET['notification_token']; 
   $channel_access_token = $_GET['channel_access_token'];
 
+  //チャネルアクセストークンを取得する
+  $url = 'https://api.line.me/v2/oauth/accessToken';
+  $data = array(
+      "grant_type" => "client_credentials",
+      "client_id" => "1655993509",
+      "client_secret" => "f065711da54cc0949483b9b1448d8a75",
+  );
+  $data = http_build_query($data, "", "&");
+  $header = array(
+      "Content-Type: application/x-www-form-urlencoded",
+      "Content-Length: ".strlen($data)
+  );
+  $context = array(
+      "http" => array(
+          "method"  => "POST",
+          "header"  => implode("\r\n", $header),
+          "content" => $data
+      )
+  );
+  $json = file_get_contents($url, false, stream_context_create($context));
+  $arr = json_decode($json, true);
+  $channel_access_token = $arr['access_token'];
+
   //後続メッセージを送信する
   $params = array(
     "number" => "1357"
